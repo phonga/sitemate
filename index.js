@@ -58,10 +58,10 @@ function convertTimeToWords(time) {
   }
 
   const segments = time.split(':');
-  const hour = Number.parseInt(segments[0], 10);
+  const hour = Number.parseInt(segments[0], 10) % 12;
   const minutes = Number.parseInt(segments[1], 10);
 
-  //console.log(hour, minutes, minuteToString[minutes], timeToString[hour]);
+  //console.log(Number.parseInt(segments[0], 10), hour, minutes, minuteToString[minutes], timeToString[hour]);
 
   if (minutes === 0) {
     return `${timeToString[hour]} o'clock`;

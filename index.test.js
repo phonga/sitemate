@@ -45,4 +45,9 @@ describe('Time to words', () => {
     const timeInWords = convertTimeToWords('2:15');
     expect(timeInWords).toBe('quarter past two');
   });
+
+  it('Handles 24 hour time', () => {
+    const timeInWords = convertTimeToWords('14:15');
+    expect(timeInWords).toBe('quarter past two');
+  });
 });
